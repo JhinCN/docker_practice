@@ -4,7 +4,7 @@
 
 0.9.1
 
-*说明：本书自 0.9.0 版本（2017-12-30 发布）起基于最新的 Docker CE v17.X 特性进行讲解。Docker 旧版本（1.13-）使用，请参考 [docker-legacy](https://github.com/yeasy/docker_practice/tree/docker-legacy) 分支。*
+*说明：本书自 0.9.0 版本起基于最新的 Docker CE v18.X 特性进行讲解。Docker 旧版本（1.13-）使用，请参考 [docker-legacy](https://github.com/yeasy/docker_practice/tree/docker-legacy) 分支。*
 
 [Docker](http://www.docker.com) 是个划时代的开源项目，它彻底释放了计算虚拟化的威力，极大提高了应用的维护效率，降低了云计算应用开发的成本！使用 Docker，可以让应用的部署、测试和分发都变得前所未有的高效和轻松！
 
@@ -35,7 +35,7 @@ Docker 自身仍在快速发展中，生态环境也在蓬勃成长。建议初�
 * QQ 群 IX  （已满）：571502246
 * QQ 群 X   （可加）：145983035
 
->如果有问题，请通过 [Issues](https://github.com/yeasy/docker_practice/issues/new) 来提出。
+>如果有问题，请通过 [Issues](https://github.com/yeasy/docker_practice/issues/new/choose) 来提出。
 
 ## 进阶学习
 ![](https://github.com/yeasy/docker_practice/raw/master/_images/docker_primer2.png)
