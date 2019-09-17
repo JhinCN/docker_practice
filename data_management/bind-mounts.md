@@ -64,12 +64,12 @@ $ docker inspect web
 $ docker run --rm -it \
    # -v $HOME/.bash_history:/root/.bash_history \
    --mount type=bind,source=$HOME/.bash_history,target=/root/.bash_history \
-   ubuntu:17.10 \
+   ubuntu:18.04 \
    bash
 
 root@2affd44b4667:/# history
 1  ls
-2  diskutil list   
+2  diskutil list
 ```
 
 这样就可以记录在容器输入过的命令了。

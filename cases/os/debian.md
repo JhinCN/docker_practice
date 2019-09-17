@@ -56,7 +56,6 @@ crashsystems/gitlab-docker           A trusted, regularly updated build of GitL.
 sylvainlasnier/memcached             This is a Memcached 1.4.14 docker images b...   16                   [OK]
 ubuntu-upstart                       Upstart is an event-based replacement for ...   16        [OK]
 mbentley/ubuntu-django-uwsgi-nginx                                                   16                   [OK]
-ansible/ubuntu14.04-ansible          Ubuntu 14.04 LTS with ansible                   15                   [OK]
 clue/ttrss                           The Tiny Tiny RSS feed reader allows you t...   14                   [OK]
 dockerfile/ubuntu-desktop            Trusted automated Ubuntu Desktop (LXDE) (h...   14                   [OK]
 tutum/ubuntu                         Ubuntu image with SSH access. For the root...   12                   [OK]
@@ -64,18 +63,25 @@ tutum/ubuntu                         Ubuntu image with SSH access. For the root.
 
 根据搜索出来的结果，读者可以自行选择下载镜像并使用。
 
-下面以 ubuntu 14.04 为例，演示如何使用该镜像安装一些常用软件。
+下面以 ubuntu 18.04 为例，演示如何使用该镜像安装一些常用软件。
 
 首先使用 `-ti` 参数启动容器，登录 bash，查看 ubuntu 的发行版本号。
 
 ```bash
-$ docker run -ti ubuntu:14.04 /bin/bash
-root@7d93de07bf76:/# lsb_release -a
-No LSB modules are available.
-Distributor ID: Ubuntu
-Description:    Ubuntu 14.04.1 LTS
-Release:        14.04
-Codename:       trusty
+$ docker run -ti ubuntu:18.04 /bin/bash
+root@7d93de07bf76:/# cat /etc/os-release
+NAME="Ubuntu"
+VERSION="18.04.1 LTS (Bionic Beaver)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 18.04.1 LTS"
+VERSION_ID="18.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic
 ```
 
 当试图直接使用 `apt-get` 安装一个软件的时候，会提示 `E: Unable to locate package`。
