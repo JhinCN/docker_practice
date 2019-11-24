@@ -1,7 +1,6 @@
+# 利用 commit 理解镜像构成
 
 >注意：如果您是初学者，您可以暂时跳过后面的内容，直接学习 [容器](../container) 一节。
-
-## 利用 commit 理解镜像构成
 
 注意： `docker commit` 命令除了学习之外，还有一些特殊的应用场合，比如被入侵后保存现场等。但是，不要使用 `docker commit` 定制镜像，定制镜像应该使用 `Dockerfile` 来完成。如果你想要定制镜像请查看下一小节。
 
@@ -21,7 +20,7 @@ $ docker run --name webserver -d -p 80:80 nginx
 
 直接用浏览器访问的话，我们会看到默认的 Nginx 欢迎页面。
 
-<img src="_images/images-mac-example-nginx.png" width="80%" >
+![](_images/images-mac-example-nginx.png)
 
 现在，假设我们非常不喜欢这个欢迎页面，我们希望改成欢迎 Docker 的文字，我们可以使用 `docker exec` 命令进入容器，修改其内容。
 
@@ -38,7 +37,7 @@ exit
 
 现在我们再刷新浏览器的话，会发现内容被改变了。
 
-<img src="_images/images-create-nginx-docker.png" width="80%" >
+![](_images/images-create-nginx-docker.png)
 
 我们修改了容器的文件，也就是改动了容器的存储层。我们可以通过 `docker diff` 命令看到具体的改动。
 
@@ -120,7 +119,7 @@ docker run --name web2 -d -p 81:80 nginx:v2
 
 至此，我们第一次完成了定制镜像，使用的是 `docker commit` 命令，手动操作给旧的镜像添加了新的一层，形成新的镜像，对镜像多层存储应该有了更直观的感觉。
 
-### 慎用 `docker commit`
+## 慎用 `docker commit`
 
 使用 `docker commit` 命令虽然可以比较直观的帮助理解镜像分层存储的概念，但是实际环境中并不会这样使用。
 
